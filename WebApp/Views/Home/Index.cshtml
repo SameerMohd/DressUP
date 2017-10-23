@@ -1,0 +1,98 @@
+﻿@using BusinessObjects;
+@model DressUpModel
+@{
+    ViewBag.Title = "Home Page";
+}
+<div class="row">
+    <div class="col-lg-12">&nbsp;</div>
+</div>
+<div class="row">
+    <div class="col-lg-12">&nbsp;</div>
+</div>
+<div class="row">
+    <div class="col-lg-6">
+        @using (Html.BeginForm("DressUp", "Home", FormMethod.Post))
+        {
+            <div class="form-group">
+                <label for="Temp">Temprature</label>
+                <select class="form-control" name="Temp">
+                    <option value="HOT">HOT</option>
+                    <option value="COLD">COLD</option>
+                </select>
+
+            </div>
+            <div class="form-group">
+                <label for="Commands">Commands</label>
+                @Html.TextBoxFor(a => a.Commands, new { @class = "form-control", id = "Commands", name = "Commands", placeholder = "Commands" })
+                <label>Please Enter comma seperated Commands</label>
+            </div>
+            <button type="submit" class="btn btn-primary">Dress Up</button>
+        }
+        <label class="text-info">@Model.Result</label>
+    </div>
+    <div class="col-lg-6">
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Command</th>
+                    <th>Description</th>
+                    <th>Hot Response</th>
+
+                    <th>Cold Response</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>1</td>
+                    <td>Put on footwear</td>
+                    <td>sandals</td>
+                    <td>boots</td>
+                </tr>
+                <tr>
+                    <td>2</td>
+                    <td>Put on headwear</td>
+                    <td>sunglasses</td>
+                    <td>hat</td>
+                </tr>
+                <tr>
+                    <td>3</td>
+                    <td>Put on socks</td>
+                    <td>fail</td>
+                    <td>socks</td>
+                </tr>
+                <tr>
+                    <td>4</td>
+                    <td>Put on shirt</td>
+                    <td>shirt</td>
+                    <td>shirt</td>
+                </tr>
+                <tr>
+                    <td>5</td>
+                    <td>Put on jacket</td>
+                    <td>fail</td>
+                    <td>jacket</td>
+                </tr>
+                <tr>
+                    <td>6</td>
+                    <td>Put on pants</td>
+                    <td>shorts</td>
+                    <td>pants</td>
+                </tr>
+                <tr>
+                    <td>7</td>
+                    <td>Leave house</td>
+                    <td>leaving house</td>
+                    <td>leaving house</td>
+                </tr>
+                <tr>
+                    <td>8</td>
+                    <td>Take off pajamas</td>
+                    <td>Removing PJs</td>
+                    <td>Removing PJs</td>
+                </tr>
+
+            </tbody>
+        </table>
+    </div>
+
+</div>
