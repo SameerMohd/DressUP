@@ -91,6 +91,14 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\BusinessLogic\BusinessLogic.csproj">
+      <Project>{2b2f752f-ed32-4780-866c-750d45937188}</Project>
+      <Name>BusinessLogic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\BusinessObjects\BusinessObjects.csproj">
+      <Project>{115c43c7-0625-4bb2-8d4f-42ce2fc8eea1}</Project>
+      <Name>BusinessObjects</Name>
+    </ProjectReference>
     <ProjectReference Include="..\WebApp\WebApp.csproj">
       <Project>{07CF6750-509D-4998-A5FF-09C832FDB036}</Project>
       <Name>WebApp</Name>
